@@ -15,6 +15,7 @@
 
 .image_preview .thumbnail {
   animation: fadein .65s ease-out;
+  height: 210px;
   position: relative; }
 
 @keyframes fadein {
@@ -49,7 +50,7 @@
     left: 0;
     background: #fff;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 100%; }
 
 .black {

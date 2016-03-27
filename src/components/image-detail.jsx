@@ -50,7 +50,7 @@ module.exports = React.createClass({
     }
     return <CommentBox comments={this.state.comments} />
   },
-  renderImage(){
+  renderImage: function(){
     if(this.state.image.animated){
       return <video preload="auto" autoPlay="autoplay" loop="loop" webkit-playsinline>
         <source src={this.state.image.mp4} type="video/mp4" />

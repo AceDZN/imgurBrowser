@@ -72,6 +72,9 @@ gulp.task('serve', function(done) {
     }));
 });
 
+gulp.task('apply-prod-environment', function() {
+    process.env.NODE_ENV = 'production';
+});
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -79,7 +82,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
+gulp.task('default', ['apply-prod-environment','build', 'serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);

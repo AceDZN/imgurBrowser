@@ -1,6 +1,7 @@
 var React = require('react');
-var  Header = require('./header');
-var  TopicList = require('./topic-list');
+var Header = require('./header');
+var TopicList = require('./topic-list');
+var AceLogo = require('./ace-logo');
 
 
 module.exports = React.createClass({
@@ -9,6 +10,9 @@ module.exports = React.createClass({
     return <div>
       <Header />
       {this.content()}
+      <div className="text-center">
+        <AceLogo />
+      </div>
     </div>
   },
   content: function(){

@@ -2,8 +2,11 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 module.exports = React.createClass({
-
-  HOLA
+  getInitialState: function(){
+    return {
+      hovering: false
+    }
+  },
   render: function(){
     return <div className="col-xs-6 col-sm-4 col-md-3 image_preview">
         <Link to={"images/" + this.props.id}
